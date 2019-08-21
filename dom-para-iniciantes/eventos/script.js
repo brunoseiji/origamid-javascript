@@ -34,5 +34,18 @@ function handleEvent(event) {
     console.log(event.type, event);
 }
 
-h1.addEventListener('click', handleEvent)
-console.log(h1);
+// h1.addEventListener('click', handleEvent)
+// h1.addEventListener('mouseenter', handleEvent)
+// h1.addEventListener('mousemove', handleEvent)
+
+// window.addEventListener('scroll', handleEvent);
+// window.addEventListener('resize', handleEvent);
+
+function handleKeyboard() {
+    if(event.key === 'f') {
+        document.body.classList.toggle('fullscreen');
+    }
+    console.log(event.key);
+}
+
+window.addEventListener('keydown', handleKeyboard);
