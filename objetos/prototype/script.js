@@ -35,4 +35,3 @@ const Carro = {
         return true;
     }
 }
-
