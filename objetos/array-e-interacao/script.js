@@ -82,3 +82,63 @@
 // },0)
 
 // console.log(maiorNumero2);
+
+// const aulas = [
+//     {
+//         nome: 'HTML 1',
+//         min: 15
+//     },
+//     {
+//         nome: 'HTML 2',
+//         min: 10
+//     },
+//     {
+//         nome: 'CSS 1',
+//         min: 20
+//     },
+//     {
+//         nome: 'Javascript 1',
+//         min: 25
+//     }
+// ]
+
+// const listaAulas = aulas.reduce((acumulador, aula, index) => {
+//     acumulador[index] = aula.nome;
+//     return acumulador;
+// }, {});
+
+
+
+
+
+// Some
+
+// const frutas = ['Banana', 'Pêra', 'Uva'];
+
+// const temUva = frutas.some((item) => {
+//     return item === 'Uva';
+// });
+
+// console.log(temUva);
+
+
+
+
+
+//Every - Verifica se possui algum item false, se sim, retorna
+
+const frutas = ['Banana', 'Pêra', 'Uva'];
+
+const every = frutas.every((fruta) => {
+    return fruta;
+})
+
+console.log(every); //true
+
+const numeros = [6, 43, 22, 88, 101, 29];
+
+const maiorQue3 = numeros.every((n) => {
+    return n >= 6;
+});
+
+console.log(maiorQue3); //true
