@@ -83,24 +83,24 @@
 
 // console.log(maiorNumero2);
 
-// const aulas = [
-//     {
-//         nome: 'HTML 1',
-//         min: 15
-//     },
-//     {
-//         nome: 'HTML 2',
-//         min: 10
-//     },
-//     {
-//         nome: 'CSS 1',
-//         min: 20
-//     },
-//     {
-//         nome: 'Javascript 1',
-//         min: 25
-//     }
-// ]
+const aulas = [
+    {
+        nome: 'HTML 1',
+        min: 15
+    },
+    {
+        nome: 'HTML 2',
+        min: 10
+    },
+    {
+        nome: 'CSS 1',
+        min: 20
+    },
+    {
+        nome: 'Javascript 1',
+        min: 25
+    }
+]
 
 // const listaAulas = aulas.reduce((acumulador, aula, index) => {
 //     acumulador[index] = aula.nome;
@@ -127,18 +127,65 @@
 
 //Every - Verifica se possui algum item false, se sim, retorna
 
-const frutas = ['Banana', 'Pêra', 'Uva'];
+// const frutas = ['Banana', 'Pêra', 'Uva'];
 
-const every = frutas.every((fruta) => {
-    return fruta;
+// const every = frutas.every((fruta) => {
+//     return fruta;
+// })
+
+// console.log(every); //true
+
+// const numeros = [6, 43, 22, 88, 101, 29];
+
+// const maiorQue3 = numeros.every((n) => {
+//     return n >= 6;
+// });
+
+// console.log(maiorQue3); //true
+
+
+
+
+
+// Find e FindIndex
+/*
+    .find(), retorna o valor atual da primeira iteração que retornar um valor truthy
+    .findIndex(), retorna o index deste valor na array
+*/
+const frutas = ['Banana', 'Pêra', 'Maçã', 'Uva'];
+
+const indexUva = frutas.findIndex((item) => {
+    return item === 'Uva';
 })
 
-console.log(every); //true
+console.log(indexUva); //posição onde encontrou o true = 3
 
-const numeros = [6, 43, 22, 88, 101, 29];
+const findUva = frutas.find((item) => {
+    return item === 'Uva';
+})
 
-const maiorQue3 = numeros.every((n) => {
-    return n >= 6;
+console.log(findUva);
+
+
+
+
+
+
+// Filter
+/*
+ .filter(), retorna uma array com a lista de valores que durante a sua iteração retornaram um valor truthy.
+*/
+const frutas1 = ['Banana', undefined, null, '', 'Uva', 0, 'Maçã'];
+
+const arrayFrutas = frutas1.filter((item) => {
+    console.log(item);
+    return item;
 });
+console.log(arrayFrutas);
 
-console.log(maiorQue3); //true
+
+// Aulas que são maiores que 15 minutos
+const maiores15 = aulas.filter((aula) => {
+    return aula.min >= 15;
+})
+console.log(maiores15);
